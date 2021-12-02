@@ -1,0 +1,77 @@
+$brown: #9b2a2a;
+$blue: #0003ce;
+$green: #7fd819;
+$yellow: #fffb00;
+$red: #ff0000;
+
+@mixin circle {
+  border-radius: 50%;
+  margin: auto;
+}
+@mixin number {
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  color: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+div {
+  @include circle;
+  background-color: $brown;
+  width: 700px;
+  height: 700px;
+  p {
+    @include number;
+  }
+  div {
+    @include circle;
+    background-color: $blue;
+    width: 600px;
+    height: 600px;
+
+    p {
+      @include number;
+    }
+    div {
+      @include circle;
+      background-color: $green;
+      width: 500px;
+      height: 500px;
+
+      p {
+        @include number;
+      }
+      div {
+        @include circle;
+        background-color: $yellow;
+        width: 400px;
+        height: 400px;
+
+        p {
+          @include number;
+        }
+        div {
+          @include circle;
+          background-color: $red;
+          width: 300px;
+          height: 300px;
+
+          p {
+            @include number;
+            padding-top: 120px;
+          }
+        }
+      }
+    }
+  }
+}
